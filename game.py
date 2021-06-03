@@ -35,10 +35,10 @@ def set_deck(shuffle: bool = False) -> deck:
         random.shuffle(deck)
     return deck
 
-def deliver_cards(deck: deck, number_of_players: int) -> Tuple:
+def deliver_cards(deck: deck, number_of_players: int) -> List:
     """Deliver the cards to each player"""
     number_of_cards = 52 // number_of_players
-    hands = [[] for i in range(number_of_players)]
+    hands: List = [[] for i in range(number_of_players)]
     n=0
     for i in range(number_of_cards):
         for j in range(number_of_players):
@@ -47,17 +47,22 @@ def deliver_cards(deck: deck, number_of_players: int) -> Tuple:
     return hands
 
 def names(number_of_players: int) -> List[str]:
+    """Name the players as P1, P2, P3 and so on"""
     name = []
     for i in range(number_of_players):
         name.append(f'P{i+1}')
     return name
 
+"""Create a new deck"""
 new_deck = set_deck(shuffle=True)
 
+"""Create names for each player"""
 players = names(number_of_players)
 
+"""Create a hand for each player"""
 hands = {j: m for j, m in zip(players,deliver_cards(new_deck,number_of_players))}
-    
+
+"""Show the hand of each player"""
 for player, new_deck in hands.items():
     new_cards = ' '.join(f"{j}{c}" for (j,c) in new_deck)
     print(f'{player}: {new_cards}')
