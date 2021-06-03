@@ -1,8 +1,10 @@
 """
 This is a coding exercise.
-It aims to show the use of Classes and Typing Hints in Python
+It aims to show the use of:
+    - Classes
+    - Typing Hints
 
-It was taken from the online course:
+This exercises is part of the online course:
 https://www.udemy.com/course/curso-de-programacao-em-python-do-basico-ao-avancado/
 """
 
