@@ -3,6 +3,7 @@ This repository contains coding exercises.
 More information will be added soon.
 
 Comments and suggestions are welcome,
+
 Thank you,
 
 ---
