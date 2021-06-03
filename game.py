@@ -8,6 +8,7 @@ The goal is:
     - Create a deck of cards
     - Shuffle it
     - Split it to a N number of players
+    - Each player receive the same amount of cards
 
 This exercises is part of the online course:
 https://www.udemy.com/course/curso-de-programacao-em-python-do-basico-ao-avancado/
@@ -15,6 +16,9 @@ https://www.udemy.com/course/curso-de-programacao-em-python-do-basico-ao-avancad
 
 import random
 from typing import List,Tuple
+
+# Number of players in the game
+number_of_players = 3
 
 # from https://www.alt-codes.net/suit-cards.php
 suits = '♠ ♡ ♢ ♣'.split()
@@ -31,14 +35,28 @@ def set_deck(shuffle: bool = False) -> deck:
         random.shuffle(deck)
     return deck
 
-def deliver_cards(deck: deck) -> Tuple:
+def deliver_cards(deck: deck, number_of_players: int) -> Tuple:
     """Deliver the cards to each player"""
-    return (deck[0::4],deck[1::4],deck[2::4],deck[3::4])
+    number_of_cards = 52 // number_of_players
+    hands = [[] for i in range(number_of_players)]
+    n=0
+    for i in range(number_of_cards):
+        for j in range(number_of_players):
+            hands[j].append(deck[n])
+            n+=1
+    return hands
 
-"""Inicia um jogo de cards para 4 jogadores"""
+def names(number_of_players: int) -> List[str]:
+    name = []
+    for i in range(number_of_players):
+        name.append(f'P{i+1}')
+    return name
+
 new_deck = set_deck(shuffle=True)
-players = 'P1 P2 P3 P4'.split()
-hands = {j: m for j, m in zip(players,deliver_cards(new_deck))}
+
+players = names(number_of_players)
+
+hands = {j: m for j, m in zip(players,deliver_cards(new_deck,number_of_players))}
     
 for player, new_deck in hands.items():
     new_cards = ' '.join(f"{j}{c}" for (j,c) in new_deck)
