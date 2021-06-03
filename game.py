@@ -31,15 +31,15 @@ def set_deck(shuffle: bool = False) -> deck:
         random.shuffle(deck)
     return deck
 
-def deliver_cards(deck: deck) -> Tuple[deck]:
+def deliver_cards(deck: deck) -> Tuple:
     """Deliver the cards to each player"""
     return (deck[0::4],deck[1::4],deck[2::4],deck[3::4])
 
 """Inicia um jogo de cards para 4 jogadores"""
-cards = set_deck(shuffle=True)
+new_deck = set_deck(shuffle=True)
 players = 'P1 P2 P3 P4'.split()
-hands = {j: m for j, m in zip(players,deliver_cards(cards))}
+hands = {j: m for j, m in zip(players,deliver_cards(new_deck))}
     
-for player, cards in hands.items():
-    card = ' '.join(f"{j}{c}" for (j,c) in cards)
-    print(f'{player}: {card}')
+for player, new_deck in hands.items():
+    new_cards = ' '.join(f"{j}{c}" for (j,c) in new_deck)
+    print(f'{player}: {new_cards}')
