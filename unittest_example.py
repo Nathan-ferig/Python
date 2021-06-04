@@ -1,8 +1,15 @@
 """
-This example aims to show the use of unitest
+Unittest example:
 
+This exercise aims to show the use of unitest.
+
+This executes the code and verify if it work exactly as intended.
+
+Run the test at terminal with:
 python -m unittest -v unittest_example.py
 
+More information about doctest please visit:
+https://docs.python.org/3/library/unittest.html
 """
 import unittest
 

@@ -1,7 +1,9 @@
 """
 Doctest example:
 
-Doctest module executes the code and verify if it work exactly as intended.
+This exercise aims to show the use of doctest.
+
+This executes the code and verify if it work exactly as intended.
 
 Run the test at terminal with:
 python -m doctest -v doctest_example.py
