@@ -10,7 +10,7 @@ The goal is:
     - Split it to a N number of players
     - Each player receive the same amount of cards
 
-This exercises is part of the online course:
+This exercise is part of the online course:
 https://www.udemy.com/course/curso-de-programacao-em-python-do-basico-ao-avancado/
 """
 

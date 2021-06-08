@@ -4,7 +4,7 @@ It aims to show the use of:
     - Classes
     - Typing Hints
 
-This exercises is part of the online course:
+This exercise is part of the online course:
 https://www.udemy.com/course/curso-de-programacao-em-python-do-basico-ao-avancado/
 """
 
