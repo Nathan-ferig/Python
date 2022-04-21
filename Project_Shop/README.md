@@ -1,10 +1,8 @@
-# Math Game
+# Simple Shop
 
-> This project is a simple game involving math operations.
+> This project is a simple example of a shop's operation.
 
-In this game, the player is given a math operation and need to give a solution to it. If the solution is correct, the player scores a point.
-
-At each new operation, the player can set the difficulty level, in order to receive more or less challenging problems.
+In this example, one can enter data for a list of products for a shop and then shop for those items, adding the products to the cart and buying them.
 
 This project is part of the following [online course](https://www.udemy.com/course/curso-de-programacao-em-python-do-basico-ao-avancado/ "Online Course"). It aims to showcase some of the skills I learned throughout the course.
 
