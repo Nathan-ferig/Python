@@ -8,7 +8,7 @@ This executes the code and verify if it work exactly as intended.
 Run the test at terminal with:
 python -m doctest -v doctest_example.py
 
-More information about doctest please visit:
+For more information about doctest please visit:
 https://docs.python.org/3/library/doctest.html
 """
 
