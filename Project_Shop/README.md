@@ -4,6 +4,8 @@
 
 In this example, one can enter data for a list of products for a shop and then shop for those items, adding the products to the cart and buying them.
 
+> The files within this folder will soon be transleted to English
+
 This project is part of the following [online course](https://www.udemy.com/course/curso-de-programacao-em-python-do-basico-ao-avancado/ "Online Course"). It aims to showcase some of the skills I learned throughout the course.
 
 Comments and suggestions are welcome,
